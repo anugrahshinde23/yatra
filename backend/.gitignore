@@ -1,0 +1,11 @@
+# Node.js dependencies
+node_modules/
+
+# Logs and temp files
+*.log
+/tmp/
+/dist/
+/build/
+
+# Environment files
+.env
