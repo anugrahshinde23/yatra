@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url('https://www.transparenttextures.com/patterns/light-paper-fibers.png'), #f3f4f6;
+}
+
+/* Flip-card support */
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/* Input focus animation */
+input:focus {
+  transform: scale(1.02);
+  transition: transform 0.2s;
+}
+
+/* Button animation */
+button {
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+button:hover:not(:disabled) {
+  transform: scale(1.05);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Toastify container */
+#toast-container {
+  z-index: 9999;
+}
